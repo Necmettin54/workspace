@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="EkranKartibean" class ="com.eclipsespring.EkranKarti">
+	<property name="bellek" value= "DDDS"></property>
+	<property name="marka" value="Powerrangers"></property>
+	<property name="bit" value="128"></property>
+	</bean>
+	<bean id="AnaKartbean" class="com.eclipsespring.AnaKart">
+	<constructor-arg value="AMD"></constructor-arg>
+	<constructor-arg value ="DMD"></constructor-arg>
+	<constructor-arg ref="EkranKartibean"></constructor-arg>
+	</bean>
+  
+
+</beans>
